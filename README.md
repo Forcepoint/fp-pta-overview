@@ -12,6 +12,8 @@ active use for 3 years now.
 1. Go through each of the example hosts in the order someone should set them up so they get
 familiar with the tools.
 
+1. Give quick examples of other systems they could setup with the PTA ansible roles.
+
 ## Notes
 
 1. For each PTA system you provision, you specify a static IP for terraform to use. It is assumed
