@@ -37,8 +37,8 @@ to get ones created for your PTA Controller and for your PTA Controller Packer b
 You'll also need static IPs for those systems. Also, you'll need a certificate for the PTA Controller.
 I beg you not to use a self-signed certificate. Please obtain one from a Certificate Authority.
 
-If your company runs your own internal CA, I would highly recommend not using it for your Artifactory
-instance, at the very least, if that's possible. Keep in mind that every single developer workstation, 
+If your company runs your own internal CA, I would highly recommend not using it for any of your PTA systems,
+or at the very least, not Artifactory if that's possible. Keep in mind that every single developer workstation, 
 every single VM, and every single docker container that interacts with one of these PTA provided systems
 will have to install the public certificate for your internal CA. Also likely, they'll have to install
 it in multiple places for each, as some applications manage their own cert store.
