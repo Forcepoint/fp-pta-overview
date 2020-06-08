@@ -17,7 +17,7 @@ If you've decided to adopt PTA or to at least try it out, this is where you shou
 
 So here's the rub. You have a chicken-and-egg problem out of the gate. The steps here
 will setup your PTA Controller Jenkins instance, but it's up to you to decide if you want to
-house part or all of the PTA repositories (repos for your own hosts, repos for the ansible roles, and 
+house part or all of the PTA Git repositories (repos for your own hosts, repos for the ansible roles, and 
 repos for the terraform modules) in your PTA provided Gitlab instance or elsewhere in your own
 Git hosting solution. I opted for the PTA provided Gitlab instance, but that's just me.
 If you decide the PTA Gitlab instance, you'll need to modify the following repositories
