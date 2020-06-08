@@ -14,6 +14,10 @@
 
 ## Create Your Hosts
 
+1. Call out that copying the code from the pta-controller-node-01 example is a good starting point.
+Then if you need something from the pta-controller-master example, add it in (like the directions
+for creating a certificate).
+
 1. Give quick examples of other ways you can combine the roles to produce functional
 systems.
 
