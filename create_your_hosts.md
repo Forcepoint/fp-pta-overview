@@ -78,3 +78,12 @@ avoiding problems with running out of disk space.
 correct number of backups are there and that none are missing (EX: one per workday M-F for 10 workdays).
 I was lazy and decided to add each of these applications as a jenkins node to make the connection 
 via a Jenkinsfile to run a python script for verifying the backups.
+
+
+
+##### ..._Fin_.
+
+Thank you for making it to the end here. I've worked very hard over the years to develop PTA and
+then to open source it. I sincerely hope it will help you and your organization.
+
+_Send feedback and comments to [jeremy.cornett@forcepointgov.com](mailto:jeremy.cornett@forcepointgov.com) Forcepoint 2020, BSD-3-Clause_

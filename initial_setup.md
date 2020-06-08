@@ -20,3 +20,10 @@ Terraforming your golden images, and setting up the PTA Controller.
 1. Call out that copying the code from the pta-controller-node-01 example is a good starting point.
 Then if you need something from the pta-controller-master example, add it in (like the directions
 for creating a certificate).
+
+
+
+
+##### ...continue to the next topic [Building Blocks](building_blocks.md).
+
+_Send feedback and comments to [jeremy.cornett@forcepointgov.com](mailto:jeremy.cornett@forcepointgov.com) Forcepoint 2020, BSD-3-Clause_
