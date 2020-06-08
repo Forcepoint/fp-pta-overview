@@ -13,9 +13,25 @@
 
 ## Benefits
 
+The benefits of using PTA are many. If you've read this far, you will likely recognize these already.
 
+* Easily Create Test Systems
 
+* Backout Plan Baked In
 
+* Production Upgrade Failures are Rare
+
+* System Updates without Worry
+
+* Best Practices for Security
+
+* Monitoring Baked In
+
+* Disposable Systems
+
+* Maintenance is a Breeze
+
+* PTA Principles Applicable Elsewhere
 
 ##### ...continue to the next topic [Initial Setup](initial_setup.md).
 
