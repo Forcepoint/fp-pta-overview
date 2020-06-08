@@ -21,6 +21,8 @@ Terraforming your golden images, and setting up the PTA Controller.
 Then if you need something from the pta-controller-master example, add it in (like the directions
 for creating a certificate).
 
+1. Call out the drawbacks of using your own CA instead of a public one.
+
 
 
 
