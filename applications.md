@@ -14,7 +14,7 @@
 ## Applications
 
 You've got the basis for the architecture. What systems would I want to manage with this PTA solution?
-The primary use case is what I like to call them the CM Trifecta. Your average engineering organization
+The primary use case is what I like to call the CM Trifecta. Your average engineering organization
 should be using CI/CD, and I wanted solutions that were free or next to, and ones that could be hosted on-prem
 should the be a requirement for your organization, 
 and I've found there are three applications that fit the bill best - Jenkins, Gitlab, and Artifactory. This isn't
