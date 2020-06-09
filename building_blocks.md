@@ -53,10 +53,14 @@ that the default of 500 GB is more than enough.
 
 ### Ansible Roles
 
-Here is a comprehensive list of all the available Ansible roles for PTA. Note that some roles
-support both CentOS and Windows, but for some the windows based role has been broken out into
-it's own role. Whether it's one role or two is really driven by whether or not the variables
-for the role can be used with both. If the answer was no, a separate role was created.
+Here is a comprehensive list of all the available Ansible roles for PTA.
+
+A role ending with `-win` is exclusively for use on Windows. Of the roles that do not end in `-win`,
+they may support only CentOS (EX: docker-host), or only Windows (EX: prtg), or even both (EX: general-config). 
+You'll need to investigate the role's tasks and determine if there's a portion for Windows. 
+A `-win` role is only created when the CentOS version of the role would require changes to the 
+variables for it to work with Windows. For example, the backup-local role uses cron for scheduling,
+but the Windows version uses the Task Scheduler, and they require different information to run.
 
 1. [backup-local](https://github.com/Forcepoint/fp-pta-ansible-backup-local)
 
