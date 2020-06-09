@@ -33,6 +33,9 @@ This Engineer needs to be...
 1. Very familiar Configuration Management, Ansible in particular.
 1. Understand the benefits of Infrastructure as Code.
 1. Versed in Python scripting.
+1. Familiar with your cloud hosting provider of choice.
+    1. Note that PTA was designed to work with VMware vSphere, but you can use these principles
+    with any cloud hosting provider and your own Terraform Modules for it.
 
 As of this writing in the summer of 2020, PTA has been under development and active use for three years.
 This is a mature solution that has proven itself, and is now available as an open source solution for
