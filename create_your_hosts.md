@@ -77,19 +77,19 @@ Here's a few suggested recipes to help illuminate how the building blocks can be
 
    The jenkins role needs to be applied before virtualbox so the jenkins user exists as that's the default user for virtualbox.
 
-    * general-config
-    * jfrog-cli
-    * packer
-    * gnome
-    * jenkins-node-jnlp
-    * virtualbox 
+    * [general-config](https://github.com/Forcepoint/fp-pta-ansible-general-config)
+    * [jfrog-cli](https://github.com/Forcepoint/fp-pta-ansible-jfrog-cli)
+    * [packer](https://github.com/Forcepoint/fp-pta-ansible-packer)
+    * [gnome](https://github.com/Forcepoint/fp-pta-ansible-gnome)
+    * [jenkins-node-jnlp](https://github.com/Forcepoint/fp-pta-ansible-jenkins-node-jnlp)
+    * [virtualbox](https://github.com/Forcepoint/fp-pta-ansible-virtualbox)
 
 1. Jenkins SSH Build Node for Docker Builds
 
-    * general-config
-    * jfrog-cli
-    * docker-host
-    * jenkins-node-ssh
+    * [general-config](https://github.com/Forcepoint/fp-pta-ansible-general-config)
+    * [jfrog-cli](https://github.com/Forcepoint/fp-pta-ansible-jfrog-cli)
+    * [docker-host](https://github.com/Forcepoint/fp-pta-ansible-docker-host)
+    * [jenkins-node-ssh](https://github.com/Forcepoint/fp-pta-ansible-jenkins-node-ssh)
 
    I find this to be a useful play for after applying the docker-host role. 
    I set the Jenkins job to run three times a week during the night, 
@@ -137,7 +137,7 @@ Here's a few suggested recipes to help illuminate how the building blocks can be
             }
         }
 
-    * change-sshd-port - Note that you must set gather_facts to no so it won't error out because 
+    * [change-sshd-port](https://github.com/Forcepoint/fp-pta-ansible-change-sshd-port) - Note that you must set gather_facts to no so it won't error out because 
     the SSH port 2222 isn't set yet on first run. `inventory.py` has been hard coded to set the 
     SSH port to 2222 for any host with 'gitlab' in the name.
 
@@ -147,19 +147,19 @@ Here's a few suggested recipes to help illuminate how the building blocks can be
               roles:
                 - role: change-sshd-port
 
-    * general-config
-    * docker-host
-    * extra-disk
-    * docker-gitlab
-    * backup-local for `backup_local_target: /mnt/extra/docker/gitlab/config`
-    * backup-local for `backup_local_target: /mnt/extra/docker/gitlab/data`
+    * [general-config](https://github.com/Forcepoint/fp-pta-ansible-general-config)
+    * [docker-host](https://github.com/Forcepoint/fp-pta-ansible-docker-host)
+    * [extra-disk](https://github.com/Forcepoint/fp-pta-ansible-extra-disk)
+    * [docker-gitlab](https://github.com/Forcepoint/fp-pta-ansible-docker-gitlab)
+    * [backup-local](https://github.com/Forcepoint/fp-pta-ansible-backup-local) for `backup_local_target: /mnt/extra/docker/gitlab/config`
+    * [backup-local](https://github.com/Forcepoint/fp-pta-ansible-backup-local) for `backup_local_target: /mnt/extra/docker/gitlab/data`
 
 1. Artifactory
 
-    * general-config
-    * docker-host
-    * extra-disk
-    * docker-artifactory
+    * [general-config](https://github.com/Forcepoint/fp-pta-ansible-general-config)
+    * [docker-host](https://github.com/Forcepoint/fp-pta-ansible-docker-host)
+    * [extra-disk](https://github.com/Forcepoint/fp-pta-ansible-extra-disk)
+    * [docker-artifactory](https://github.com/Forcepoint/fp-pta-ansible-docker-artifactory)
     
     Note that I don't use backup-local here as as Artifactory can manage its own backups. 
 
@@ -188,12 +188,12 @@ Here's a few suggested recipes to help illuminate how the building blocks can be
     ansible command to use it. See https://github.com/Forcepoint/fp-pta-host-template-windows-10-prod
     as an example.
 
-    * general-config
-    * extra-disk-win
-    * prtg
-    * backup-local-win for `backup_local_win_target: C:\Program Files (x86)\PRTG Network Monitor`
-    * backup-local-win for `backup_local_win_target: C:\ProgramData\Paessler\PRTG Network Monitor`
-    * backup-local-win for `backup_local_win_target: HKLM\SOFTWARE\Wow6432Node\Paessler\PRTG Network Monitor`
+    * [general-config](https://github.com/Forcepoint/fp-pta-ansible-general-config)
+    * [extra-disk-win](https://github.com/Forcepoint/fp-pta-ansible-extra-disk-win)
+    * [prtg](https://github.com/Forcepoint/fp-pta-ansible-prtg)
+    * [backup-local-win](https://github.com/Forcepoint/fp-pta-ansible-backup-local-win) for `backup_local_win_target: C:\Program Files (x86)\PRTG Network Monitor`
+    * [backup-local-win](https://github.com/Forcepoint/fp-pta-ansible-backup-local-win) for `backup_local_win_target: C:\ProgramData\Paessler\PRTG Network Monitor`
+    * [backup-local-win](https://github.com/Forcepoint/fp-pta-ansible-backup-local-win) for `backup_local_win_target: HKLM\SOFTWARE\Wow6432Node\Paessler\PRTG Network Monitor`
 
 1. TestSystems
 
