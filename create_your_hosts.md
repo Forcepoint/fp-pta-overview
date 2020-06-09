@@ -21,6 +21,61 @@ for creating a certificate).
 1. Give quick examples of other ways you can combine the roles to produce functional
 systems.
 
+1. Explain about using a secondary disk, especially with a datastore cluster (it is not ideal and can cause DRS headaches).
+The idea is for the secondary disk to house the application data and backups. Example...
+
+        - name: setup extra disk
+          hosts: artifactory
+          vars:
+            extra_disk_mount_path: /home/{{ ansible_user_id }}/data
+          roles:
+          - role: extra-disk
+        
+        - name: configure Artifactory
+          hosts: gitlab
+          vars:
+            docker_artifactory_data: /home/{{ ansible_user_id }}/data
+          roles:
+          - role: docker-artifactory
+            
+    or...
+    
+        - name: setup extra disk
+          hosts: gitlab
+          vars:
+            extra_disk_mount_path: /mnt/extra
+          roles:
+            - role: extra-disk
+        
+        - name: setup gitlab
+          hosts: gitlab
+          vars:
+            docker_gitlab_root_data_dir: /mnt/extra/docker
+          roles:
+            - role: docker-gitlab
+        
+        - name: backup the gitlab config
+          hosts: gitlab
+          vars:
+            backup_local_name: gitlab_config
+            backup_local_target: /mnt/extra/docker/gitlab/config
+            backup_local_destination: /mnt/extra/backups
+            # Ensure the two gitlab backups aren't running concurrently by offsetting them by 2 minutes
+            backup_local_minute: "0"
+          roles:
+            - role: backup-local
+        
+        - name: backup the gitlab data
+          hosts: gitlab
+          vars:
+            backup_local_name: gitlab_data
+            backup_local_target: /mnt/extra/docker/gitlab/data
+            backup_local_destination: /mnt/extra/backups
+            # Ensure the two gitlab backups aren't running concurrently by offsetting them by 2 minutes
+            backup_local_minute: "2"
+          roles:
+            - role: backup-local
+
 1. For each PTA system you provision, you specify a static IP for terraform to use. It is assumed
 that you work with your IT department to get static DNS entries created for these applications.
 
