@@ -41,7 +41,7 @@ If your company runs your own internal CA, I would highly recommend not using it
 or at the very least, not Artifactory if that's possible. Keep in mind that every single developer workstation, 
 every single VM, and every single docker container that interacts with one of these PTA provided systems
 will have to install the public certificate for your internal CA. Also likely, they'll have to install
-it in multiple places for each, as some applications manage their own cert store.
+it in multiple places for each, as some programs manage their own cert store.
 The $1000 spent for your Artifactory wildcard certificate from a public CA that's already trusted
 in most operating systems is $1000 very, very, very well spent. It will save your PTA admin and also 
 your developers tons of headache.
@@ -59,8 +59,8 @@ Clone that repository to your workstation and follow the directions in the readm
 This is handled via https://github.com/Forcepoint/fp-pta-host-template-centos-7-prod
 Clone that repository to your workstation and follow the directions in the readme.
 
-1. You now have the templates that you need. You're ready to create your PTA Controller, which is a
-Jenkins instance that you use to run jobs for creating your templates and other systems.
+1. You now have the template VMs that you need. You're ready to create your PTA Controller, which is a
+Jenkins instance that you use to run jobs for creating your templates and other systems automatically.
 This is handled via https://github.com/Forcepoint/fp-pta-host-ptacontroller-master
 Clone that repository to your workstation and follow the directions in the readme.
 
