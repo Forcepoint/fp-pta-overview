@@ -73,6 +73,10 @@ Clone that repository to your workstation and follow the directions in the readm
 1. Assuming you want to setup Windows 10 VMs via PTA, at some point you should get these setup as well.
     1. https://github.com/Forcepoint/fp-pta-host-template-windows-10-test
     1. https://github.com/Forcepoint/fp-pta-host-template-windows-10-prod
+    
+    Make sure you note that you must create a `hosts` file and modify the `Jenkinsfile` 
+    ansible command to use it. See https://github.com/Forcepoint/fp-pta-host-template-windows-10-prod
+    as an example.
 
 ##### ...continue to the next topic [Building Blocks](building_blocks.md).
 
